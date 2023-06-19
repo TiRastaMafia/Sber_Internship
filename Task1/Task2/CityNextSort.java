@@ -1,6 +1,8 @@
-package Task1;
+package Task2;
 
-public class City implements Comparable<City>{
+import java.util.Comparator;
+
+public class CityNextSort implements Comparable<CityNextSort>{
     private int Id;
     private String Name;
     private String Region;
@@ -69,10 +71,10 @@ public class City implements Comparable<City>{
 
 
     @Override
-    public int compareTo(City o) {
-        return getName().compareTo(o.getName());
+    public int compareTo(CityNextSort o){
+        return Comparator.comparing(CityNextSort::getDistrict)
+                  .thenComparing(CityNextSort::getName)
+                  .compare(this, o);
     }
-
-
 
 }

@@ -1,4 +1,4 @@
-package Task1;
+package Task2;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -13,16 +13,16 @@ public class CSVReader {
     public static void main(String[] args) throws IOException {
         // открываем файл
         BufferedReader reader = new BufferedReader(new FileReader(
-                "C:\\Users\\mega1\\Desktop\\GB \u0423\u0447\u0435\u0431\u043A\u0430\\SberTask\\Task1\\Task1\\Java_Sber.csv"));
+                "C:\\Users\\mega1\\Desktop\\GB \u0423\u0447\u0435\u0431\u043A\u0430\\SberTask\\Task1\\Task2\\Java_Sber.csv"));
  
         // считываем построчно
         String line = null;
         Scanner scanner = null;
         int index = 0;
-        List<City> empList = new ArrayList<>();
+        List<CityNextSort> empList = new ArrayList<>();
  
         while ((line = reader.readLine()) != null) {
-            City emp = new City();
+            CityNextSort emp = new CityNextSort();
             scanner = new Scanner(line);
             scanner.useDelimiter(";");
             while (scanner.hasNext()) {
